@@ -1,0 +1,166 @@
+.container {
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+}
+
+.timeline-event {
+  margin: 10px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.timeline-event::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -9999px;
+  right: -10px;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.timeline-event:last-child::after {
+  display: none;
+}
+
+/* Your event element styles */
+.timeline-event h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.timeline-event h3 {
+  font-size: 18px;
+  color: #555;
+}
+
+.timeline-event img {
+  max-width: 100%;
+  height: auto;
+}
+
+.timeline-event p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777;
+}
+
+.timeline-event .event-year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 0 10px;
+}
+
+.timeline-event .event-image {
+  text-align: center;
+}
+
+.timeline-event .event-description {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Decade Labels */
+.decade-labels {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  background: #f0f0f0;
+  z-index: 1;
+}
+
+.decade-labels span {
+  font-size: 14px;
+  color: #333;
+  width: calc(100% / 9);
+  text-align: center;
+}
+
+.decade-labels .arrow {
+  display: none;
+}
+
+/* Arrows */
+.arrow-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Menu and Navigation */
+.horizontal-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.horizontal-menu nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-menu nav ul li {
+  margin: 0 10px;
+}
+
+.horizontal-menu nav ul li.search-box {
+  margin-left: auto;
+}
+
+.horizontal-menu nav ul li input {
+  padding: 5px;
+}
+/* Set IPSA (left-item) to the left */
+.left-item {
+  margin-left: 10px;
+}
+
+/* Ensure the menu items are centered */
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
